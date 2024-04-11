@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BLL
 {
@@ -66,13 +67,13 @@ namespace BLL
             }
             else
             {
-                Console.WriteLine("Exento de impuesto de ISR");
+                MessageBox.Show("Exento de impuesto de ISR");
             }
 
             TotalDescuento += ImpuestoIsr;
 
             SueldoNeto = SueldoBase - TotalDescuento;
-
+            
         }
 
         #endregion
