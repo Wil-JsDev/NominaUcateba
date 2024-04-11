@@ -17,17 +17,18 @@ namespace BLL
         #region Metodos
         public void AgregarProfesoresNomina(Profesores profesor)
         {
+            profesor.Id = ListaProfesores.Count + 1;
             ListaProfesores.Add(profesor);
         }
 
-        public void ListarDetalles()
+        public List<Profesores> GetProfesores()
         {
-            
+            return ListaProfesores;
         }
 
         public void BorrarDetalles()
         {
-
+            
         }
 
         #endregion
