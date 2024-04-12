@@ -1,6 +1,7 @@
 ﻿using BLL;
 using MaterialSkin;
 using MaterialSkin.Controls;
+using Reporte;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -101,6 +102,20 @@ namespace UI
                 e.Handled = true;
                 return;
             }
+        }
+
+        private void BtnListar_Click(object sender, EventArgs e)
+        {
+            FrmProfesores Visor = new FrmProfesores();
+
+            //Crear la lista para enviar al visor
+            List<Profesores> listaProfesores = nomina.GetProfesores();
+
+            string nombreReporte = "Reporte.Reportes.Profesores.rdlc";
+
+            string titulo = "Nomina de profesores";
+
+            Visor.Imprimir(nombreReporte,titulo,listaProfesores);
         }
     }
 }

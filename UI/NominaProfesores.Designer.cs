@@ -233,6 +233,7 @@
             this.BtnListar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.BtnListar.UseAccentColor = true;
             this.BtnListar.UseVisualStyleBackColor = true;
+            this.BtnListar.Click += new System.EventHandler(this.BtnListar_Click);
             // 
             // dataGridView1
             // 
