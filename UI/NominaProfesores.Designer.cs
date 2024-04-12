@@ -30,20 +30,17 @@
         {
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
             this.txtPrecioHoras = new MaterialSkin.Controls.MaterialTextBox();
             this.txtHorasTrabjadas = new MaterialSkin.Controls.MaterialTextBox();
             this.txtApellido = new MaterialSkin.Controls.MaterialTextBox();
             this.txtNombre = new MaterialSkin.Controls.MaterialTextBox();
-            this.txtId = new MaterialSkin.Controls.MaterialTextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.BtnBorrar = new MaterialSkin.Controls.MaterialButton();
             this.BtnListar = new MaterialSkin.Controls.MaterialButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.materialTextBox12 = new MaterialSkin.Controls.MaterialTextBox();
             this.materialTextBox11 = new MaterialSkin.Controls.MaterialTextBox();
-            this.BtnAgregarProfesor = new MaterialSkin.Controls.MaterialButton();
-            this.materialButton2 = new MaterialSkin.Controls.MaterialButton();
-            this.BtnCalcularSueldo = new MaterialSkin.Controls.MaterialButton();
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -61,25 +58,45 @@
             this.materialTabControl1.Multiline = true;
             this.materialTabControl1.Name = "materialTabControl1";
             this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(582, 658);
+            this.materialTabControl1.Size = new System.Drawing.Size(833, 662);
             this.materialTabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.materialButton2);
-            this.tabPage1.Controls.Add(this.BtnCalcularSueldo);
             this.tabPage1.Controls.Add(this.txtPrecioHoras);
             this.tabPage1.Controls.Add(this.txtHorasTrabjadas);
             this.tabPage1.Controls.Add(this.txtApellido);
             this.tabPage1.Controls.Add(this.txtNombre);
-            this.tabPage1.Controls.Add(this.txtId);
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(574, 629);
+            this.tabPage1.Size = new System.Drawing.Size(825, 633);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Profesores";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // materialButton2
+            // 
+            this.materialButton2.AutoSize = false;
+            this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Dense;
+            this.materialButton2.Depth = 0;
+            this.materialButton2.DrawShadows = false;
+            this.materialButton2.HighEmphasis = true;
+            this.materialButton2.Icon = null;
+            this.materialButton2.Location = new System.Drawing.Point(412, 317);
+            this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialButton2.Name = "materialButton2";
+            this.materialButton2.NoAccentTextColor = System.Drawing.Color.Empty;
+            this.materialButton2.Size = new System.Drawing.Size(173, 39);
+            this.materialButton2.TabIndex = 12;
+            this.materialButton2.Text = "Agregar Profesor";
+            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            this.materialButton2.UseAccentColor = true;
+            this.materialButton2.UseVisualStyleBackColor = true;
+            this.materialButton2.Click += new System.EventHandler(this.materialButton2_Click);
             // 
             // txtPrecioHoras
             // 
@@ -89,7 +106,7 @@
             this.txtPrecioHoras.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtPrecioHoras.Hint = "Precio Horas";
             this.txtPrecioHoras.LeadingIcon = null;
-            this.txtPrecioHoras.Location = new System.Drawing.Point(107, 260);
+            this.txtPrecioHoras.Location = new System.Drawing.Point(231, 259);
             this.txtPrecioHoras.MaxLength = 50;
             this.txtPrecioHoras.MouseState = MaterialSkin.MouseState.OUT;
             this.txtPrecioHoras.Multiline = false;
@@ -108,7 +125,7 @@
             this.txtHorasTrabjadas.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtHorasTrabjadas.Hint = "Horas Trabajadas";
             this.txtHorasTrabjadas.LeadingIcon = null;
-            this.txtHorasTrabjadas.Location = new System.Drawing.Point(107, 207);
+            this.txtHorasTrabjadas.Location = new System.Drawing.Point(231, 196);
             this.txtHorasTrabjadas.MaxLength = 50;
             this.txtHorasTrabjadas.MouseState = MaterialSkin.MouseState.OUT;
             this.txtHorasTrabjadas.Multiline = false;
@@ -127,7 +144,7 @@
             this.txtApellido.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtApellido.Hint = "Apellido";
             this.txtApellido.LeadingIcon = null;
-            this.txtApellido.Location = new System.Drawing.Point(107, 154);
+            this.txtApellido.Location = new System.Drawing.Point(231, 136);
             this.txtApellido.MaxLength = 50;
             this.txtApellido.MouseState = MaterialSkin.MouseState.OUT;
             this.txtApellido.Multiline = false;
@@ -137,6 +154,7 @@
             this.txtApellido.Text = "";
             this.txtApellido.TrailingIcon = null;
             this.txtApellido.UseTallSize = false;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtNombre
             // 
@@ -146,7 +164,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.txtNombre.Hint = "Nombre";
             this.txtNombre.LeadingIcon = null;
-            this.txtNombre.Location = new System.Drawing.Point(107, 98);
+            this.txtNombre.Location = new System.Drawing.Point(231, 77);
             this.txtNombre.MaxLength = 50;
             this.txtNombre.MouseState = MaterialSkin.MouseState.OUT;
             this.txtNombre.Multiline = false;
@@ -156,30 +174,12 @@
             this.txtNombre.Text = "";
             this.txtNombre.TrailingIcon = null;
             this.txtNombre.UseTallSize = false;
-            // 
-            // txtId
-            // 
-            this.txtId.AnimateReadOnly = false;
-            this.txtId.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtId.Depth = 0;
-            this.txtId.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.txtId.Hint = "ID";
-            this.txtId.LeadingIcon = null;
-            this.txtId.Location = new System.Drawing.Point(107, 45);
-            this.txtId.MaxLength = 50;
-            this.txtId.MouseState = MaterialSkin.MouseState.OUT;
-            this.txtId.Multiline = false;
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(354, 36);
-            this.txtId.TabIndex = 1;
-            this.txtId.Text = "";
-            this.txtId.TrailingIcon = null;
-            this.txtId.UseTallSize = false;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.BtnBorrar);
-            this.tabPage2.Controls.Add(this.BtnAgregarProfesor);
             this.tabPage2.Controls.Add(this.BtnListar);
             this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Controls.Add(this.materialTextBox12);
@@ -187,7 +187,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(574, 629);
+            this.tabPage2.Size = new System.Drawing.Size(825, 633);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Nomina";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -201,12 +201,12 @@
             this.BtnBorrar.DrawShadows = false;
             this.BtnBorrar.HighEmphasis = true;
             this.BtnBorrar.Icon = null;
-            this.BtnBorrar.Location = new System.Drawing.Point(138, 466);
+            this.BtnBorrar.Location = new System.Drawing.Point(494, 468);
             this.BtnBorrar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.BtnBorrar.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnBorrar.Name = "BtnBorrar";
             this.BtnBorrar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.BtnBorrar.Size = new System.Drawing.Size(95, 39);
+            this.BtnBorrar.Size = new System.Drawing.Size(140, 39);
             this.BtnBorrar.TabIndex = 15;
             this.BtnBorrar.Text = "Borrar";
             this.BtnBorrar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
@@ -222,14 +222,14 @@
             this.BtnListar.DrawShadows = false;
             this.BtnListar.HighEmphasis = true;
             this.BtnListar.Icon = null;
-            this.BtnListar.Location = new System.Drawing.Point(422, 466);
+            this.BtnListar.Location = new System.Drawing.Point(666, 468);
             this.BtnListar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.BtnListar.MouseState = MaterialSkin.MouseState.HOVER;
             this.BtnListar.Name = "BtnListar";
             this.BtnListar.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.BtnListar.Size = new System.Drawing.Size(95, 39);
+            this.BtnListar.Size = new System.Drawing.Size(126, 39);
             this.BtnListar.TabIndex = 13;
-            this.BtnListar.Text = "Listar";
+            this.BtnListar.Text = "Imprimir";
             this.BtnListar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.BtnListar.UseAccentColor = true;
             this.BtnListar.UseVisualStyleBackColor = true;
@@ -237,10 +237,10 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(47, 192);
+            this.dataGridView1.Location = new System.Drawing.Point(56, 181);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(470, 255);
+            this.dataGridView1.Size = new System.Drawing.Size(736, 278);
             this.dataGridView1.TabIndex = 4;
             // 
             // materialTextBox12
@@ -251,7 +251,7 @@
             this.materialTextBox12.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox12.Hint = "Mes";
             this.materialTextBox12.LeadingIcon = null;
-            this.materialTextBox12.Location = new System.Drawing.Point(104, 116);
+            this.materialTextBox12.Location = new System.Drawing.Point(253, 126);
             this.materialTextBox12.MaxLength = 50;
             this.materialTextBox12.MouseState = MaterialSkin.MouseState.OUT;
             this.materialTextBox12.Multiline = false;
@@ -270,7 +270,7 @@
             this.materialTextBox11.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.materialTextBox11.Hint = "Fecha";
             this.materialTextBox11.LeadingIcon = null;
-            this.materialTextBox11.Location = new System.Drawing.Point(104, 64);
+            this.materialTextBox11.Location = new System.Drawing.Point(253, 69);
             this.materialTextBox11.MaxLength = 50;
             this.materialTextBox11.MouseState = MaterialSkin.MouseState.OUT;
             this.materialTextBox11.Multiline = false;
@@ -281,77 +281,11 @@
             this.materialTextBox11.TrailingIcon = null;
             this.materialTextBox11.UseTallSize = false;
             // 
-            // BtnAgregarProfesor
-            // 
-            this.BtnAgregarProfesor.AutoSize = false;
-            this.BtnAgregarProfesor.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BtnAgregarProfesor.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Dense;
-            this.BtnAgregarProfesor.Depth = 0;
-            this.BtnAgregarProfesor.DrawShadows = false;
-            this.BtnAgregarProfesor.HighEmphasis = true;
-            this.BtnAgregarProfesor.Icon = null;
-            this.BtnAgregarProfesor.Location = new System.Drawing.Point(241, 466);
-            this.BtnAgregarProfesor.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.BtnAgregarProfesor.MouseState = MaterialSkin.MouseState.HOVER;
-            this.BtnAgregarProfesor.Name = "BtnAgregarProfesor";
-            this.BtnAgregarProfesor.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.BtnAgregarProfesor.Size = new System.Drawing.Size(173, 39);
-            this.BtnAgregarProfesor.TabIndex = 14;
-            this.BtnAgregarProfesor.Text = "Agregar Profesor";
-            this.BtnAgregarProfesor.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.BtnAgregarProfesor.UseAccentColor = true;
-            this.BtnAgregarProfesor.UseVisualStyleBackColor = true;
-            this.BtnAgregarProfesor.Click += new System.EventHandler(this.BtnAgregarProfesor_Click);
-            // 
-            // materialButton2
-            // 
-            this.materialButton2.AutoSize = false;
-            this.materialButton2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialButton2.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Dense;
-            this.materialButton2.Depth = 0;
-            this.materialButton2.DrawShadows = false;
-            this.materialButton2.HighEmphasis = true;
-            this.materialButton2.Icon = null;
-            this.materialButton2.Location = new System.Drawing.Point(298, 335);
-            this.materialButton2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.materialButton2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialButton2.Name = "materialButton2";
-            this.materialButton2.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.materialButton2.Size = new System.Drawing.Size(173, 39);
-            this.materialButton2.TabIndex = 12;
-            this.materialButton2.Text = "Calcular Descuento";
-            this.materialButton2.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.materialButton2.UseAccentColor = true;
-            this.materialButton2.UseVisualStyleBackColor = true;
-            this.materialButton2.Click += new System.EventHandler(this.materialButton2_Click);
-            // 
-            // BtnCalcularSueldo
-            // 
-            this.BtnCalcularSueldo.AutoSize = false;
-            this.BtnCalcularSueldo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.BtnCalcularSueldo.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Dense;
-            this.BtnCalcularSueldo.Depth = 0;
-            this.BtnCalcularSueldo.DrawShadows = false;
-            this.BtnCalcularSueldo.HighEmphasis = true;
-            this.BtnCalcularSueldo.Icon = null;
-            this.BtnCalcularSueldo.Location = new System.Drawing.Point(107, 335);
-            this.BtnCalcularSueldo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.BtnCalcularSueldo.MouseState = MaterialSkin.MouseState.HOVER;
-            this.BtnCalcularSueldo.Name = "BtnCalcularSueldo";
-            this.BtnCalcularSueldo.NoAccentTextColor = System.Drawing.Color.Empty;
-            this.BtnCalcularSueldo.Size = new System.Drawing.Size(173, 39);
-            this.BtnCalcularSueldo.TabIndex = 11;
-            this.BtnCalcularSueldo.Text = "Calcular Sueldo";
-            this.BtnCalcularSueldo.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            this.BtnCalcularSueldo.UseAccentColor = true;
-            this.BtnCalcularSueldo.UseVisualStyleBackColor = true;
-            this.BtnCalcularSueldo.Click += new System.EventHandler(this.BtnCalcularSueldo_Click);
-            // 
             // FrmNominaProfesores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 724);
+            this.ClientSize = new System.Drawing.Size(838, 728);
             this.Controls.Add(this.materialTabControl1);
             this.DrawerTabControl = this.materialTabControl1;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -377,15 +311,12 @@
         private MaterialSkin.Controls.MaterialTextBox txtHorasTrabjadas;
         private MaterialSkin.Controls.MaterialTextBox txtApellido;
         private MaterialSkin.Controls.MaterialTextBox txtNombre;
-        private MaterialSkin.Controls.MaterialTextBox txtId;
         private MaterialSkin.Controls.MaterialButton BtnBorrar;
         private MaterialSkin.Controls.MaterialButton BtnListar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox12;
         private MaterialSkin.Controls.MaterialTextBox materialTextBox11;
-        private MaterialSkin.Controls.MaterialButton BtnAgregarProfesor;
         private MaterialSkin.Controls.MaterialButton materialButton2;
-        private MaterialSkin.Controls.MaterialButton BtnCalcularSueldo;
     }
 }
 
