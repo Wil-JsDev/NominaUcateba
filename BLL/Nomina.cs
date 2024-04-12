@@ -26,9 +26,9 @@ namespace BLL
             return ListaProfesores;
         }
 
-        public void BorrarDetalles()
+        public void BorrarDetalles(Profesores profesores)
         {
-            
+            ListaProfesores.Remove(profesores);
         }
 
         #endregion
