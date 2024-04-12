@@ -108,6 +108,10 @@
       <Project>{114ba746-c14a-40bd-8b60-1ba4ff637b43}</Project>
       <Name>BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Reporte\Reporte.csproj">
+      <Project>{8d8c0de7-233c-4966-bd98-1940a1aaa14b}</Project>
+      <Name>Reporte</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />

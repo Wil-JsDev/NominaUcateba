@@ -110,10 +110,6 @@
       <Project>{114ba746-c14a-40bd-8b60-1ba4ff637b43}</Project>
       <Name>BLL</Name>
     </ProjectReference>
-    <ProjectReference Include="..\UI\UI.csproj">
-      <Project>{1544c6a2-b4d1-4bf6-97eb-cf3f85808af4}</Project>
-      <Name>UI</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />

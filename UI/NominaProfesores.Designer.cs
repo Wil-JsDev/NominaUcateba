@@ -212,6 +212,7 @@
             this.BtnBorrar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.BtnBorrar.UseAccentColor = true;
             this.BtnBorrar.UseVisualStyleBackColor = true;
+            this.BtnBorrar.Click += new System.EventHandler(this.BtnBorrar_Click);
             // 
             // BtnListar
             // 
@@ -233,6 +234,7 @@
             this.BtnListar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.BtnListar.UseAccentColor = true;
             this.BtnListar.UseVisualStyleBackColor = true;
+            this.BtnListar.Click += new System.EventHandler(this.BtnListar_Click);
             // 
             // dataGridView1
             // 
