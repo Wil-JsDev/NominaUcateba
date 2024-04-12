@@ -17,8 +17,10 @@ namespace BLL
         #region Metodos
         public void AgregarProfesoresNomina(Profesores profesor)
         {
-            profesor.Id = ListaProfesores.Count + 1;
-            ListaProfesores.Add(profesor);
+                int count = ListaProfesores.Count;
+                profesor.Id = count + 1;
+                ListaProfesores.Add(profesor);
+           
         }
 
         public List<Profesores> GetProfesores()

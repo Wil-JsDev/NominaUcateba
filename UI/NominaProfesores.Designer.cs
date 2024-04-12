@@ -212,6 +212,7 @@
             this.BtnBorrar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.BtnBorrar.UseAccentColor = true;
             this.BtnBorrar.UseVisualStyleBackColor = true;
+            this.BtnBorrar.Click += new System.EventHandler(this.BtnBorrar_Click);
             // 
             // BtnListar
             // 

@@ -88,10 +88,10 @@
                   <Width>1.34375in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.58333in</Width>
+                  <Width>0.6875in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.625in</Width>
+                  <Width>0.82292in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.20833in</Width>
@@ -802,7 +802,7 @@
             <Top>0.20708in</Top>
             <Left>0.13417in</Left>
             <Height>0.67708in</Height>
-            <Width>8.65624in</Width>
+            <Width>8.95833in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -872,7 +872,9 @@
                   <TextRuns>
                     <TextRun>
                       <Value>=Sum(Fields!SueldoNeto.Value, "DsProfesores")</Value>
-                      <Style />
+                      <Style>
+                        <Format>'$'#,0.0;('$'#,0.0)</Format>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -891,6 +893,7 @@
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
                 <PaddingBottom>2pt</PaddingBottom>
+                <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
               </Style>
             </Textbox>
             <Textbox Name="Textbox29">
@@ -901,7 +904,9 @@
                   <TextRuns>
                     <TextRun>
                       <Value>=Sum(Fields!HorasTrabajadas.Value, "DsProfesores")</Value>
-                      <Style />
+                      <Style>
+                        <Format>'$'#,0.0;('$'#,0.0)</Format>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -921,6 +926,7 @@
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
                 <PaddingBottom>2pt</PaddingBottom>
+                <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
               </Style>
             </Textbox>
             <Textbox Name="Textbox30">
@@ -931,7 +937,10 @@
                   <TextRuns>
                     <TextRun>
                       <Value>=Sum(Fields!AFP.Value, "DsProfesores")</Value>
-                      <Style />
+                      <Style>
+                        <Format>'$'#,0.0;('$'#,0.0)</Format>
+                        <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -961,7 +970,9 @@
                   <TextRuns>
                     <TextRun>
                       <Value>=Sum(Fields!SS.Value, "DsProfesores")</Value>
-                      <Style />
+                      <Style>
+                        <Format>'$'#,0.0;('$'#,0.0)</Format>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -981,6 +992,7 @@
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
                 <PaddingBottom>2pt</PaddingBottom>
+                <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
               </Style>
             </Textbox>
             <Textbox Name="Textbox2">
@@ -991,7 +1003,9 @@
                   <TextRuns>
                     <TextRun>
                       <Value>=Sum(Fields!TotalDescuento.Value, "DsProfesores")</Value>
-                      <Style />
+                      <Style>
+                        <Format>'$'#,0.0;('$'#,0.0)</Format>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -1011,6 +1025,7 @@
                 <PaddingRight>2pt</PaddingRight>
                 <PaddingTop>2pt</PaddingTop>
                 <PaddingBottom>2pt</PaddingBottom>
+                <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
               </Style>
             </Textbox>
             <Textbox Name="Textbox4">
@@ -1021,7 +1036,9 @@
                   <TextRuns>
                     <TextRun>
                       <Value>=Sum(Fields!SueldoBase.Value, "DsProfesores")</Value>
-                      <Style />
+                      <Style>
+                        <Format>'$'#,0.0;('$'#,0.0)</Format>
+                      </Style>
                     </TextRun>
                   </TextRuns>
                   <Style />
@@ -1033,6 +1050,38 @@
               <Height>0.33806in</Height>
               <Width>0.78472in</Width>
               <ZIndex>5</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+                <rd:FormatSymbolCulture>en-US</rd:FormatSymbolCulture>
+              </Style>
+            </Textbox>
+            <Textbox Name="Totales">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Totales:</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Center</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <Top>0.06125in</Top>
+              <Left>2.03in</Left>
+              <Height>0.27555in</Height>
+              <Width>0.86458in</Width>
+              <ZIndex>6</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>

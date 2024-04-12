@@ -67,7 +67,7 @@ namespace BLL
             }
             else
             {
-                MessageBox.Show("Exento de impuesto de ISR");
+                Console.WriteLine("Exento de impuesto de ISR");
             }
 
             TotalDescuento += ImpuestoIsr;
